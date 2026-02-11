@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Server } from 'http';
 import mongoose from 'mongoose';
 import app from './app';
@@ -17,7 +18,6 @@ const startServer = async () => {
 }
 
 startServer()
-
 
 // signal termination error
 process.on('SIGTERM', () => {
