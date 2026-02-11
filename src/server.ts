@@ -5,7 +5,6 @@ import app from './app';
 import { envVars } from './app/config/env';
 
 let server: Server;
-// mongoose.connect(envVars.DB_URL)
 
 const startServer = async () => {
     try {
