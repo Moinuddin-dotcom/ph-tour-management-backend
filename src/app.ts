@@ -3,6 +3,7 @@ import express, { Application, Request, Response } from 'express';
 // import { UserRoutes } from './app/modules/user/user.route';
 import cors from 'cors';
 import { router } from './app/routes';
+import { globalErrorHandlers } from './app/middlewares/globalErrorHandlers';
 
 const app: Application = express();
 app.use(express.json())
@@ -13,5 +14,9 @@ app.use("/api/v1", router);
 app.get('/', (req: Request, res: Response) => {
     res.status(200).json({ message: "Welcome to PH Tour Management Backend API" })
 })
+
+
+// Global Error Handler
+app.use(globalErrorHandlers);
 
 export default app;
