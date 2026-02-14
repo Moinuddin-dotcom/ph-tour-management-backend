@@ -8,7 +8,7 @@ const moduleRoutes = [
     {
         path: "/user",
         route: UserRoutes
-    }
+    },
 ]
 
 moduleRoutes.forEach(route => {
